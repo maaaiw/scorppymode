@@ -1,0 +1,188 @@
+$color01: #5100a2;
+$color02: #f8b400;
+$color03: #f2e6ff;
+$black: #2c2c2c;
+$font1: "Goldman", cursive;
+$font2: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+  "游ゴシック", "Yu Gothic", sans-serif;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: 100;
+
+  h1 {
+    padding-top: 3px;
+    color: #fff;
+    font-family: $font1;
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+
+    @media (min-width: 750px) {
+      font-size: 50px;
+    }
+  }
+
+  a {
+    img {
+      width: 40px;
+      @media (min-width: 750px) {
+        width: 80px;
+      }
+    }
+  }
+
+  @media (min-width: 750px) {
+    height: 80px;
+  }
+}
+
+.menu-block {
+  padding-top: 40px;
+  width: 40px;
+  height: 40px;
+
+  @media (min-width: 750px) {
+    padding-top: 80px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/*　ハンバーガーボタン　*/
+.hamburger {
+  display: block;
+  position: fixed;
+  z-index: 3;
+  top: 0px;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+
+  @media (min-width: 750px) {
+    top: 20px;
+    right: 40px;
+  }
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: $color02;
+  transition: 0.3s ease-in-out;
+  @media (min-width: 750px) {
+    width: 40px;
+  }
+}
+
+.hamburger span:nth-child(1) {
+  top: 10px;
+  @media (min-width: 750px) {
+    top: 5px;
+  }
+}
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+.hamburger span:nth-child(3) {
+  top: 30px;
+  @media (min-width: 750px) {
+    top: 35px;
+  }
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top: 17px;
+  transform: rotate(-45deg);
+}
+.hamburger.active span:nth-child(2) {
+  transform: translate(150px);
+}
+.hamburger.active span:nth-child(3) {
+  top: 17px;
+  transform: rotate(45deg);
+}
+
+nav.gl-nav {
+  position: fixed;
+  z-index: 2;
+  top: 40px;
+  left: 0;
+  color: #fff;
+  text-align: center;
+  transform: translateX(100%);
+  transition: all 0.5s;
+  width: 100%;
+  height: 100%;
+  font-family: $font2;
+
+  @media (min-width: 750px) {
+    top: 80px;
+  }
+}
+
+nav.gl-nav ul {
+  background: $color01;
+  margin: 0 auto;
+  width: 100%;
+}
+
+nav.gl-nav ul li {
+  list-style-type: none;
+  width: 100%;
+  padding-left: 10px;
+  border-bottom: 1px solid $black;
+  text-align: left;
+
+  &:hover {
+    background-color: $color02;
+  }
+}
+
+nav.gl-nav ul li a {
+  display: block;
+  color: #fff;
+  padding: 1em 0;
+  text-decoration: none;
+}
+/* このクラスを、jQueryで付与・削除する */
+nav.gl-nav.active {
+  transform: translateX(0%);
+}
+
+//検索ボックス
+.search {
+  padding: 10px;
+  background-color: #555555;
+
+  &-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding-left: 10px;
+
+    img {
+      width: 16px;
+    }
+  }
+}
+.contents-top {
+  height: 40px;
+  padding-top: 40px;
+
+  @media (min-width: 750px) {
+    height: 80px;
+    padding-top: 80px;
+  }
+}

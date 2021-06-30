@@ -1,0 +1,93 @@
+$color01: #5100a2;
+$color02: #f8b400;
+$color03: #f2e6ff;
+$black: #2c2c2c;
+$font1: "Goldman", cursive;
+$font2: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+  "游ゴシック", "Yu Gothic", sans-serif;
+
+footer {
+  width: 100%;
+  background-color: $black;
+  color: #fff;
+  font-family: $font2;
+  font-size: 14px;
+
+  p {
+    margin: 10px;
+    padding-left: 10px;
+    border-left: 2px solid #fff;
+  }
+
+  & ul li a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: $color01;
+    }
+  }
+
+  & ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 12px;
+
+    li {
+      padding: 0 5px 0;
+      border-left: 1px solid #fff;
+      list-style: none;
+
+      &:first-child {
+        border: none;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    background-size: cover;
+
+    @media (min-width: 750px) {
+      height: 50px;
+      background-size: contain;
+    }
+  }
+}
+
+.sns {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 40px;
+    color: #fff;
+    font-family: $font1;
+    font-weight: normal;
+    text-decoration: none;
+
+    &.twitter {
+      background-color: #00acee;
+    }
+
+    &.instagram {
+      background-color: #d93177;
+    }
+
+    &.line {
+      background-color: #00b900;
+    }
+  }
+}
+
+.small {
+  padding: 20px 0 5px;
+  text-align: center;
+}

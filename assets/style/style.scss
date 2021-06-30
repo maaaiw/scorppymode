@@ -1,0 +1,419 @@
+$color01: #5100a2;
+$color02: #f8b400;
+$color03: #f2e6ff;
+$black: #2c2c2c;
+$font1: "Goldman", cursive;
+$font2: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+  "游ゴシック", "Yu Gothic", sans-serif;
+
+@import "./header.css";
+
+//faqbtn
+.faq {
+  position: fixed;
+  right: 10px;
+  font-family: $font2;
+  z-index: 100;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: $black;
+    color: $color02;
+    text-decoration: none;
+    border: 3px solid #fff;
+    border-radius: 50px;
+  }
+  .q {
+    position: relative;
+    bottom: 3px;
+    font-size: 50px;
+  }
+
+  p {
+    font-size: 12px;
+    &:nth-child(2) {
+      position: relative;
+      bottom: 17px;
+    }
+  }
+}
+
+// メンバーメニュー
+.member-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+
+  ul {
+    max-width: 1000;
+  }
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 40px;
+    text-decoration: none;
+    background-color: #fff;
+    color: $color01;
+    white-space: nowrap;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    &:link {
+      color: $color01;
+    }
+    &:visited {
+      color: $color01;
+    }
+    &:hover {
+      color: $color01;
+    }
+
+    i {
+      font-size: 22px;
+    }
+
+    p {
+      padding-left: 5px;
+      font-family: $font2;
+      font-size: 14px;
+    }
+  }
+}
+
+// スワイパー
+.swiper-container {
+  padding-bottom: 26px;
+
+  img {
+    width: 100%;
+  }
+
+  @media (min-width: 750px) {
+    display: none;
+  }
+}
+
+.swiper-container img {
+  padding-bottom: 26px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #000;
+  opacity: 0.2;
+}
+
+:root {
+  --swiper-pagination-color: #f8b400;
+}
+
+.pc-container {
+  display: none;
+  img {
+    width: 100%;
+  }
+
+  @media (min-width: 750px) {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 1200px;
+
+    .big-con {
+      &:nth-child(1) {
+        grid-column: 1/3;
+        grid-row: 1/4;
+      }
+    }
+  }
+}
+
+// サンプル
+.sample {
+  margin: auto;
+  max-width: 1000px;
+
+  & a {
+    text-decoration: none;
+    text-shadow: 0px 0px 3px #000;
+  }
+}
+
+.sam {
+  margin: 0px 10px 10px;
+
+  a {
+    display: block;
+    color: #fff;
+
+    h3 {
+      padding: 10px;
+      font-family: $font2;
+    }
+
+    p {
+      position: relative;
+      top: 5px;
+      padding-left: 10px;
+      font-family: $font2;
+      font-size: 12px;
+      @media (min-width: 750px) {
+        top: 48%;
+      }
+    }
+  }
+}
+
+.sam h3:last-child {
+  padding: 55px 10px;
+  @media (min-width: 750px) {
+    position: relative;
+    padding: 95px 10px;
+  }
+}
+
+@mixin sampleimg {
+  height: 100px;
+  background-size: cover;
+
+  @media (min-width: 750px) {
+    height: 180px;
+  }
+}
+
+.sp {
+  padding: 10px;
+
+  &-01 {
+    a {
+      background: url(../images/sample01.jpg);
+      @include sampleimg();
+    }
+  }
+
+  &-02 {
+    a {
+      background: url(../images/sample02.jpg);
+      @include sampleimg();
+    }
+  }
+  &-03 {
+    a {
+      background: url(../images/sample03.jpg);
+      @include sampleimg();
+    }
+  }
+  &-saw {
+    h3 {
+      margin: auto 0;
+      font-size: 24px;
+    }
+    a {
+      width: 100%;
+      height: 150px;
+      background: url(../images/saw.jpg);
+      background-size: cover;
+
+      @media (min-width: 750px) {
+        height: 220px;
+      }
+    }
+  }
+}
+
+//コンテンツメイン部
+h2 {
+  display: flex;
+  align-items: center;
+  font-family: $font1;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+section {
+  margin-top: 50px;
+  font-family: $font2;
+
+  @media (min-width: 750px) {
+    margin-bottom: 50px;
+  }
+}
+
+.section-title {
+  &::before {
+    display: block;
+    width: 5px;
+    height: 30px;
+    margin: 0 10px;
+    background-color: $color01;
+    content: " ";
+  }
+}
+
+//コンテンツ内部
+//works
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 10px;
+  padding: 10px;
+
+  img {
+    width: 100%;
+  }
+  @media (min-width: 480px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (min-width: 896px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.works-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: $color01;
+  color: #fff;
+  text-decoration: none;
+}
+
+//SNS
+.sns {
+  &-box {
+    @media (min-width: 750px) {
+      display: flex;
+      justify-content: space-around;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+  }
+  &-con {
+    margin-bottom: 50px;
+    @media (min-width: 750px) {
+      margin-bottom: 0px;
+      width: 33%;
+    }
+  }
+
+  &-sec {
+    display: flex;
+    @media (min-width: 750px) {
+      display: block;
+    }
+
+    p {
+      font-size: 10px;
+      padding: 10px 0 0 10px;
+
+      @media (min-width: 750px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &-text {
+    border: 1px solid #2c2c2c;
+    padding: 10px;
+    margin: 10px;
+
+    p {
+      font-size: 14px;
+    }
+  }
+  &-insta {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.insta-btn {
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    width: 170px;
+    height: 40px;
+    background: #d93177;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 30px;
+    text-decoration: none;
+
+    span {
+      padding-left: 5px;
+      font-size: 24px;
+      font-family: $font1;
+      text-decoration: none;
+    }
+  }
+}
+
+.line {
+  &-image {
+    img {
+      width: 100%;
+    }
+  }
+
+  &-plus {
+    img {
+      height: 40px;
+      border: none;
+    }
+  }
+}
+
+//ショップガイド
+aside {
+  margin-top: 50px;
+  font-family: $font2;
+}
+.shop-g {
+  margin: 10px;
+  padding: 10px;
+  background-color: $color03;
+  color: $black;
+
+  p {
+    font-size: 14px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+  }
+
+  a {
+    &:visited {
+      color: $color01;
+    }
+
+    &:hover {
+      color: $color02;
+    }
+  }
+}
+
+@import "./footer.css";

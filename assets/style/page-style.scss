@@ -1,0 +1,437 @@
+$color01: #5100a2;
+$color02: #f8b400;
+$color03: #f2e6ff;
+$black: #2c2c2c;
+$font1: "Goldman", cursive;
+$font2: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+  "游ゴシック", "Yu Gothic", sans-serif;
+
+@import "./header.css";
+
+.contents-top {
+  height: 40px;
+  padding-top: 40px;
+
+  @media (min-width: 750px) {
+    height: 80px;
+    padding-top: 80px;
+  }
+}
+
+//メイン部
+main {
+  background-color: $color03;
+  padding: 20px;
+  color: $black;
+  p {
+    font-size: 14px;
+    font-family: $font2;
+  }
+  ul {
+    padding-bottom: 10px;
+  }
+  ul li {
+    font-size: 14px;
+    list-style: none;
+
+    a {
+      text-decoration: none;
+
+      &:link {
+        color: $color01;
+      }
+      &:visited {
+        color: $color01;
+      }
+      &:hover {
+        color: $color01;
+      }
+    }
+  }
+}
+
+.contact {
+  input {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid $black;
+    margin-bottom: 10px;
+  }
+
+  select {
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: $color03;
+    font-size: 14px;
+  }
+
+  textarea {
+    padding: 5px;
+    width: 100%;
+    height: 20vh;
+    border: 1px solid $black;
+    margin-bottom: 10px;
+  }
+}
+
+.order-check {
+  border-top: 1px dashed $color01;
+  padding-top: 20px;
+
+  p {
+    margin-bottom: 5px;
+    padding-left: 10px;
+    border-left: 3px solid $color02;
+    font-size: 16px;
+  }
+  .question {
+    margin-bottom: 20px;
+    .input-text {
+      font-size: 14px;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    height: 120px;
+    border: 1px solid $black;
+    margin-bottom: 20px;
+  }
+}
+
+//ページトップボタン
+#page_top {
+  position: fixed;
+  right: -10px;
+  width: 90px;
+  height: 100px;
+
+  a {
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: $color01;
+    text-decoration: none;
+    opacity: 0.7;
+
+    &::before {
+      position: absolute;
+      top: -50px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      width: 20px;
+      height: 20px;
+      color: #fff;
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
+      font-size: 30px;
+      text-align: center;
+      content: "\f102";
+    }
+
+    &::after {
+      position: absolute;
+      top: 40px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      color: #fff;
+      font-family: $font1;
+      text-align: center;
+      font-size: 16px;
+      content: "PAGE TOP";
+    }
+  }
+}
+
+//概要
+.concept {
+  h2 {
+    span {
+      display: block;
+
+      @media (min-width: 430px) {
+        display: inline;
+      }
+    }
+  }
+  img {
+    width: 100%;
+  }
+  &-side {
+    h3 {
+      border-left: 5px solid $color01;
+      padding-left: 10px;
+      font-size: 20px;
+      font-family: $font2;
+    }
+    ul {
+      display: block;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      padding: 10px;
+      list-style: none;
+
+      li {
+        height: 40px;
+        padding: 10px;
+        font-size: 14px;
+        font-family: $font2;
+        border-bottom: 1px solid $color01;
+
+        span {
+          display: inline-block;
+          width: 80px;
+          height: 15px;
+        }
+      }
+    }
+  }
+}
+
+.plof {
+  display: flex;
+  align-items: center;
+
+  ul {
+    width: 50%;
+    list-style: none;
+    font-size: 14px;
+    li {
+      height: 20px;
+    }
+  }
+  img {
+    width: 50%;
+  }
+}
+
+//grid
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 10px;
+
+  img {
+    width: 100%;
+  }
+  &-box {
+    background-color: #fff;
+  }
+
+  @media (min-width: 480px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (min-width: 750px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @media (min-width: 896px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.section-title {
+  margin-bottom: 20px;
+  font-family: $font1;
+}
+
+section {
+  padding: 15px;
+  background-color: #fff;
+  color: $black;
+  font-family: $font2;
+
+  h2 {
+    margin: 10px 0;
+    padding-left: 10px;
+    font-size: 18px;
+    border-left: 5px solid $color01;
+  }
+
+  .text {
+    &-main {
+      padding: 10px;
+    }
+    &-sub {
+      padding: 10px;
+      font-size: 12px;
+    }
+  }
+
+  h6 {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: $font2;
+    border-left: 3px solid $color01;
+  }
+}
+
+//price-page リスト
+.price {
+  ul {
+    margin: 20px;
+  }
+
+  li {
+    padding: 10px 0;
+    border-bottom: 1px dashed $color02;
+  }
+
+  span {
+    border-bottom: 1px solid #00b900;
+    color: #00b900;
+  }
+}
+
+//メインテーブル
+.main-table {
+  margin-bottom: 30px;
+  border-bottom: 1px solid $color01;
+  border-collapse: collapse;
+  font-size: 14px;
+
+  tr {
+    &:nth-child(even) {
+      background-color: $color03;
+    }
+  }
+
+  th {
+    background-color: $color01;
+    color: $color03;
+  }
+
+  td {
+    padding: 10px;
+    text-align: center;
+
+    &:first-child {
+      width: 28%;
+    }
+
+    &:last-child {
+      text-align: left;
+    }
+  }
+}
+
+//セミー料金表
+.semiorder {
+  padding-bottom: 10px;
+
+  table {
+    width: 100%;
+    background-color: #fff;
+    font-size: 14px;
+    border-collapse: collapse;
+    border: 1px solid $black;
+
+    td {
+      height: 50px;
+      border: 1px dashed $black;
+      text-align: center;
+
+      &:nth-child(odd) {
+        width: 50%;
+      }
+
+      &:nth-child(even) {
+        color: #ff0000;
+      }
+    }
+  }
+
+  h3 {
+    margin: 5px 0;
+    padding-left: 5px;
+    font-size: 16px;
+    border-left: 3px solid $color02;
+  }
+}
+
+//リメイク、リサイズ
+.renew {
+  p {
+    font-size: 14px;
+    border-bottom: $color01;
+  }
+
+  ul {
+    padding-left: 10px;
+  }
+}
+
+//ボタン
+.btn {
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    margin: 20px auto;
+    background-color: $color01;
+    color: #fff;
+    font-family: $font2;
+    text-decoration: none;
+
+    &:nth-of-type(2) {
+      background: #f8b400;
+      color: $black;
+    }
+    &:nth-of-type(3) {
+      background-color: #00b900;
+    }
+  }
+
+  &-works {
+    padding-top: 10px;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 30px;
+      margin: 0 auto;
+      background-color: $color01;
+      color: #fff;
+      font-family: $font2;
+      text-decoration: none;
+    }
+  }
+}
+
+.images {
+  & label {
+    padding: 5px 0px;
+    width: 100%;
+    background-color: $color03;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+
+  input {
+    margin-bottom: 10px;
+    border: none;
+  }
+}
+.c-btn {
+  margin: 10px 0 0;
+  width: 30%;
+  background-color: $color01;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+}
+
+@import "./footer.css";

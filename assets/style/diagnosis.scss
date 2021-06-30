@@ -1,0 +1,164 @@
+$color01: #5100a2;
+$color02: #f8b400;
+$color03: #f2e6ff;
+$black: #2c2c2c;
+$font1: "Goldman", cursive;
+$font2: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+  "游ゴシック", "Yu Gothic", sans-serif;
+
+@import "./header.css";
+
+.contents-top {
+  height: 40px;
+  padding-top: 40px;
+  @media (min-width: 750px) {
+    height: 80px;
+    padding-top: 80px;
+  }
+}
+
+main {
+  padding: 20px;
+  background-color: $color03;
+
+  section {
+    background-color: #fff;
+
+    h2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #5100a2;
+      font-size: 22px;
+    }
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font2;
+}
+
+.choose_box {
+  width: 100%;
+
+  p {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+    margin-top: 30px;
+    width: 80%;
+    list-style: none;
+  }
+
+  ul li a {
+    display: block;
+    padding: 15px;
+    width: 100%;
+    background-color: $color01;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+      background-color: #fff;
+      color: $color01;
+      border: 1px solid $color01;
+    }
+  }
+}
+
+.fit {
+  width: 100%;
+
+  p {
+    display: block;
+    font-size: 16px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+//回答
+.result_type h4 {
+  margin: 0 auto;
+  padding: 10px;
+  width: 50%;
+  background-color: $color02;
+  color: $black;
+  font-size: 16px;
+  text-align: center;
+}
+
+.result_theme p {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.result_discription {
+  margin-bottom: 5px;
+  text-align: center;
+
+  h2 {
+    padding-top: 10px;
+    color: $black;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  p {
+    margin: 10px auto 20px;
+    padding: 5px;
+    width: 75%;
+    border: 1px solid $color01;
+    color: $black;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: left;
+  }
+}
+
+//戻るボタン
+.return-btn {
+  padding: 20px;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 50px;
+    background-color: $black;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px auto;
+
+    &:nth-of-type(1) {
+      background-color: $color02;
+      color: $black;
+    }
+
+    &:hover {
+      border: 1px solid $color01;
+      background-color: #fff;
+      color: $color01;
+      transition: 0.5s;
+    }
+  }
+}
+
+@import "./footer.css";
